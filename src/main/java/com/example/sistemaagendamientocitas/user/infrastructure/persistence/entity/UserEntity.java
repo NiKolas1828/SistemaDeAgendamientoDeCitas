@@ -47,12 +47,13 @@ public class UserEntity {
     private LocalDateTime updatedAt;
 
     @Builder
-    public UserEntity(String name, String email, String phoneNumber, String password, RoleEntity role) {
+    public UserEntity(Long id, String name, String email, String phoneNumber, String password, RoleEntity role, boolean active) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.password = password;
         this.role = role;
-        this.active = true;
+        this.active = active;
     }
 }
